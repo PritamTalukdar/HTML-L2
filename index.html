@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <link rel="stylesheet" href="style.css">
+     <script src="script.js"></script>
+</head>
+
+<body onload="initState()">
+     <div id="geoLoc">
+          <h1 id="header">Locate yourself</h1>
+          <p id="para">Click the button to get your coordinates.</p>
+          <button onclick="getLocation()">Try It</button>
+          <p id="demo" ></p>
+     </div>
+     <br>
+     
+     <p id="para"><button id="btn" onClick="window.location.reload();">Click here</button>to refresh the page</p>
+     
+     <hr>
+     
+     <h1 id="header">Drag and Drop App</h1>
+     <p id="para">Try Dragging the Rakbank Logo to any one of the SVG Circle</p>
+     <br>
+     <img id="draglogo" src="./logo.png" draggable="true" ondragstart="drag(event)" class="draggable" ondragend=""
+          width="105" height="73">
+     <br>
+     
+     <div id="circle" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <svg id="dest">
+               <circle id="yelcirc" cx="100" cy="100" r="100" fill="yellow" />
+               <circle id="greencirc" cx="350" cy="100" r="100" fill="green" />
+          </svg>
+     </div>
+     <br><br>
+     <p id="para"><button id="btn" onClick="window.location.reload();">Click here</button>to refresh the page</p>
+</body>
+</html>
